@@ -1,5 +1,4 @@
 {
-  "allowDestructiveRollbacks": true,
   "builds": [
     {
       "src": "index.py",
