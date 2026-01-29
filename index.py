@@ -3,6 +3,16 @@ import random
 import uuid
 from utils import save_data, generate_ai_content
 
+
+import os
+import sys
+from streamlit.web import cli as stcli
+
+def handler(request):
+    # 将入口指向你的主程序，例如 main.py
+    sys.argv = ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    stcli.main()
+    
 # --- 页面配置 ---
 st.set_page_config(page_title="创意实验", layout="wide")
 
